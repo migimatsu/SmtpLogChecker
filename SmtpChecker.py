@@ -167,7 +167,7 @@ def     output( ips, adrs ) :
 
     # ヘッダの出力
     print( "--- Rejected SMTP access over {} times retry from unknown hosts ---".format( _const['LIMIT'] )  )
-    print( "retry : IP address (From:[, ...])" )
+    print( "retry : IP address         from addresses"  )
 
     # 回数の多い順に並べ替えてすべてのエントリを出力する
     for ip, c in sorted( ips.items(), key = lambda x : -x[1] ) :
@@ -178,7 +178,7 @@ def     output( ips, adrs ) :
 
         # メールアドレスがあるなら出力
         elif ip in adrs.keys() :
-            adr     = "(" + adrs[ip] + ")"
+            adr     = adrs[ip]
 
         else :
             adr     = ""
