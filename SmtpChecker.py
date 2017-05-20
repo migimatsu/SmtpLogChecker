@@ -184,7 +184,7 @@ def     output( ips, adrs ) :
             adr     = ""
 
         # エントリを出力する
-        print( "{:5} : {} {}".format( c, ip, adr ) )
+        print( "{:5} : {:18} {}".format( c, ip, adr ) )
 
     print( '--- ' )
 
